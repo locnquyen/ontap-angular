@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-sm-12">
+    <button class="btn btn-success" (click) ="onNewStudent()">New Student</button>
+    <hr>
+    <div class="col-sm-12">
+      <div class="list-group">
+        <app-a-student  *ngFor="let _student of students;  let i = index" [student]="_student" [index]='i' (click)="onEditAStudent(i)" >
+        </app-a-student>
+      </div>
+    </div>
+  </div>
+</div>

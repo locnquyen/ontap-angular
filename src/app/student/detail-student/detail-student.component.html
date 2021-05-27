@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h3>{{student.studentID}}</h3>
+    <h2>{{student.studentName}}</h2>
+    <h4>{{student.studentBirthday}}</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+      <div class="btn-group" role="group" appDropdown>
+        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle " data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Manage Student
+        </button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <a  class="dropdown-item" > <button class="btn" (click)="onClickEditStudent()">Edit Student</button> </a>
+          <a class="dropdown-item" >Delete Student</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
