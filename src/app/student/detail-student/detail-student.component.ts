@@ -32,6 +32,6 @@ export class DetailStudentComponent implements OnInit {
   }
   onDeleteStudent(){
     this.studentService.deleteStudent(this.id);
-    this.router.navigate(['/students']);
+    this.router.navigate(['/student']);
   }
 }

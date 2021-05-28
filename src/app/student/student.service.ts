@@ -20,7 +20,8 @@ export class StudentService {
   }
 
   addStudent(st :Student){
-    this.students.push(st);
+    this.students.push(st)
+    console.log(st +"hii");
   }
   updateStudent( index: number, student : Student){
     this.students[index] = student;

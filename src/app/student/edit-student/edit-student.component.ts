@@ -1,7 +1,7 @@
 import { StudentService } from './../student.service';
 import { Student } from './../student.model';
-import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
@@ -41,22 +41,25 @@ export class EditStudentComponent implements OnInit {
     }
 
     this.studentForm = new FormGroup({
-      'id': new FormControl(ID, Validators.required),
-      'name': new FormControl(Name, Validators.required),
-      'birthday': new FormControl(Birthday, Validators.required)
+      'studentID': new FormControl(ID, Validators.required),
+      'studentName': new FormControl(Name, Validators.required),
+      'studentBirthday': new FormControl(Birthday, Validators.required)
     });
   }
 
   onSubmit() {
     if(this.editMode)
     {
-      this.studentService.updateStudent(this.id, this.studentForm.value)
+      console.log(this.studentForm.value);
+      this.studentService.updateStudent(this.id, this.studentForm.value);
+
+
     }
     else
     {
+      console.log(this.studentForm.value);
       this.studentService.addStudent(this.studentForm.value);
-      
+      console.log(this.studentForm.value);
     }
   }
-
 }
