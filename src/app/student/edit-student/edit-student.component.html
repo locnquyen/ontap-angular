@@ -3,7 +3,7 @@
     <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
       <div class="row">
         <div class="col-sm-2">
-          <button class="btn btn-success" [disabled]="!studentForm.valid" type="submit">Save</button>
+          <button class="btn btn-success" [disabled]="!studentForm.valid" type="submit">{{ editMode ? 'Update' : 'Save'}}</button>
         </div>
         <div class="col-sm-2">
           <button type="button" class="btn btn-danger">Delete</button>

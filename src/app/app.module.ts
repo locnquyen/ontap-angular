@@ -14,6 +14,7 @@ import { DetailStudentComponent } from './student/detail-student/detail-student.
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StartStudentComponent } from './student/start-student/start-student.component';
 import { EditStudentComponent } from './student/edit-student/edit-student.component';
+import { EditTeacherComponent } from './teacher/edit-teacher/edit-teacher.component';
 
 
 
@@ -28,7 +29,8 @@ import { EditStudentComponent } from './student/edit-student/edit-student.compon
     DetailStudentComponent,
     StartStudentComponent,
     DropdownDirective,
-    EditStudentComponent
+    EditStudentComponent,
+    EditTeacherComponent
   ],
   imports: [
     BrowserModule,

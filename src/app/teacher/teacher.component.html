@@ -1,1 +1,18 @@
-<p>teacher works!</p>
+<h3>Teacher</h3>
+<div class="row">
+  <div class="col-sm-12">
+    <app-edit-teacher></app-edit-teacher>
+    <hr>
+    <div class="col-sm-12">
+      <div class="list-group">
+        <a style="cursor: pointer;" *ngFor="let teacher of teachers; let i = index" (click)="onEditTeacher(i)" class="list-group-item list-group-item-action">
+          <div>
+            <h4>{{teacher.teacherID}}</h4>
+            <p> {{teacher.teacherName}}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
