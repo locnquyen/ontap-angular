@@ -14,8 +14,8 @@
           Manage Student
         </button>
         <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <a  class="dropdown-item" > <button class="btn" (click)="onClickEditStudent()">Edit Student</button> </a>
-          <a class="dropdown-item" >Delete Student</a>
+          <a  class="dropdown-item" (click)="onClickEditStudent()"> Edit Student </a>
+          <a class="dropdown-item" style="cursor: pointer;" (click)="onDeleteStudent()" >Delete Student</a>
         </div>
       </div>
     </div>

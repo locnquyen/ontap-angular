@@ -11,9 +11,9 @@ import { TeacherComponent } from './teacher/teacher.component';
 import { ListStudentComponent } from './student/list-student/list-student.component';
 import { AStudentComponent } from './student/list-student/a-student/a-student.component';
 import { DetailStudentComponent } from './student/detail-student/detail-student.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StartStudentComponent } from './student/start-student/start-student.component';
-import { StudentEditComponent } from './student/detail-student/student-edit/student-edit.component';
+import { EditStudentComponent } from './student/edit-student/edit-student.component';
 
 
 
@@ -28,12 +28,13 @@ import { StudentEditComponent } from './student/detail-student/student-edit/stud
     DetailStudentComponent,
     StartStudentComponent,
     DropdownDirective,
-    StudentEditComponent
+    EditStudentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

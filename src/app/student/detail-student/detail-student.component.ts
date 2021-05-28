@@ -29,6 +29,9 @@ export class DetailStudentComponent implements OnInit {
   }
   onClickEditStudent() {
     this.router.navigate(['edit'], { relativeTo: this.route });
-
+  }
+  onDeleteStudent(){
+    this.studentService.deleteStudent(this.id);
+    this.router.navigate(['/students']);
   }
 }
